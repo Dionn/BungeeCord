@@ -141,7 +141,7 @@ public final class UserConnection implements ProxiedPlayer
     public void setDisplayName(String name)
     {
         Preconditions.checkNotNull( name, "displayName" );
-        Preconditions.checkArgument( name.length() <= 16, "Display name cannot be longer than 16 characters" );
+        Preconditions.checkArgument( name.length() <= 16, "Je naam kan niet langer zijn dan 16 tekens" );
         getTabList().onDisconnect();
         displayName = name;
         getTabList().onConnect();
@@ -177,7 +177,7 @@ public final class UserConnection implements ProxiedPlayer
 
         if ( getServer() != null && Objects.equals( getServer().getInfo(), target ) )
         {
-            sendMessage( ChatColor.RED + "Cannot connect to server you are already on!" );
+            sendMessage( ChatColor.RED + "Je bent al op deze server!" );
             return;
         }
         if ( pendingConnects.contains( target ) )

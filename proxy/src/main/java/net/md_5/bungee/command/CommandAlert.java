@@ -19,7 +19,7 @@ public class CommandAlert extends Command
     {
         if ( args.length == 0 )
         {
-            sender.sendMessage( ChatColor.RED + "You must supply a message." );
+            sender.sendMessage( ChatColor.RED + "Voeg een bericht toe." );
         } else
         {
             StringBuilder builder = new StringBuilder();

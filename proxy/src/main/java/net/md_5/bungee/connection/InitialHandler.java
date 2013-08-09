@@ -202,7 +202,7 @@ public class InitialHandler extends PacketHandler implements PendingConnection
 
         if ( handshake.getUsername().length() > 16 )
         {
-            disconnect( "Cannot have username longer than 16 characters" );
+            disconnect( "Je mag geen naam hebben die langer is dan 16 tekens." );
             return;
         }
 

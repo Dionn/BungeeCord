@@ -20,7 +20,7 @@ public class CommandSend extends Command
     {
         if ( args.length != 2 )
         {
-            sender.sendMessage( ChatColor.RED + "Not enough arguments, usage: /send <player|all|current> <target>" );
+            sender.sendMessage( ChatColor.RED + "Te weinig argumenten, correct gebruik: /send <player|all|current> <target>" );
             return;
         }
         ServerInfo target = ProxyServer.getInstance().getServerInfo( args[1] );
@@ -53,12 +53,12 @@ public class CommandSend extends Command
             ProxiedPlayer player = ProxyServer.getInstance().getPlayer( args[0] );
             if ( player == null )
             {
-                sender.sendMessage( ChatColor.RED + "That player is not online" );
+                sender.sendMessage( ChatColor.RED + "Deze speler is niet online." );
                 return;
             }
             summon( player, target, sender );
         }
-        sender.sendMessage( ChatColor.GREEN + "Successfully summoned player(s)" );
+        sender.sendMessage( ChatColor.GREEN + "De speler(s) zijn succesvol verplaatst." );
     }
 
     private void summon(ProxiedPlayer player, ServerInfo target, CommandSender sender)
@@ -66,7 +66,7 @@ public class CommandSend extends Command
         if ( player.getServer() != null && !player.getServer().getInfo().equals( target ) )
         {
             player.connect( target );
-            player.sendMessage( ChatColor.GOLD + "Summoned to " + target.getName() + " by " + sender.getName() );
+            player.sendMessage( ChatColor.GOLD + "Je bent verplaatst naar " + target.getName() + " door " + sender.getName() );
         }
     }
 }
