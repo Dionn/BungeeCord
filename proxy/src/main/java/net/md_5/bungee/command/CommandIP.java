@@ -25,10 +25,10 @@ public class CommandIP extends Command
         ProxiedPlayer user = ProxyServer.getInstance().getPlayer( args[0] );
         if ( user == null )
         {
-            sender.sendMessage( ChatColor.RED + "Deze spelers is niet online." );
+            sender.sendMessage( ChatColor.RED + "Deze speler is niet online." );
         } else
         {
-            sender.sendMessage( ChatColor.BLUE + "IP van " + args[0] + " is " + user.getAddress() );
+            sender.sendMessage( ChatColor.BLUE + "Het IP van " + args[0] + " is " + user.getAddress() );
         }
     }
 }
