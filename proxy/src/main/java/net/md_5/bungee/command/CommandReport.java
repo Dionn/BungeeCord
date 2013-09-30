@@ -20,7 +20,7 @@ public class CommandReport extends Command
 		//laten we checken of er wel genoeg arguments worden opgegeven!
         if ( args.length < 2 )
         {
-            sender.sendMessage( ChatColor.RED + "Je mist een naam of reden bij je report." );
+            sender.sendMessage( ChatColor.RED + "Er ontbreekt een naam of reden bij je report." );
             sender.sendMessage( ChatColor.RED + "Correct gebruik: /report <naam> <reden>" );
         } else
         {
